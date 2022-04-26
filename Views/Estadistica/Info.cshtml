@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+
+<div>
+    <h3>Informacion</h3>
+    <ul>
+        <li>Porcentaje de pacientes sin enfermedades: @ViewBag.PorcetajeSanos%</li>
+        <li>
+            Paciente con mayor costo en los tratamientos:
+            <ul>
+                <li>
+                    Identificacion: @ViewBag.AfiliadoMasCostoso.Id
+                </li>
+                <li>
+                    Nombre: @ViewBag.AfiliadoMasCostoso.Nombre @ViewBag.AfiliadoMasCostoso.Apellido
+                </li>
+            </ul>
+        </li>
+        <li>Pacientes cuya enfermedad mas relevante sea el cancer: @ViewBag.TotalPacientesCancer</li>
+        <li>
+            Porcentaje de pacientes por regimen:
+            <ul>
+                <li>
+                    Subsidiado: @ViewBag.PorcentajeSubsidiado%
+                </li>
+                <li>
+                    Contributivo: @ViewBag.PorcentajeContributivo%
+                </li>
+            </ul>
+        </li>
+        <li>
+            Porcentaje de pacientes por tipo de afiliacion:
+            <ul>
+                <li>
+                    Cotizante: @ViewBag.PorcentajeCotizante%
+                </li>
+                <li>
+                    Beneficiario: @ViewBag.PorcentajeBeneficiario%
+                </li>
+            </ul>
+        </li>
+        <li>
+            Porcentaje pacientes por rango de edad:
+            <ul>
+                <li>Niños (0 - 12): @ViewBag.Niños%</li>
+                <li>Adolecentes (12 - 18): @ViewBag.Adolecentes%</li>
+                <li>Jovenes (18 - 30): @ViewBag.Joven%</li>
+                <li>Adultos (30 - 55): @ViewBag.Adulto%</li>
+                <li>Adultos Mayores (55 - 75): @ViewBag.AdultoMayor%</li>
+                <li>Ancianos (Mayor de 75): @ViewBag.Anciano%</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+

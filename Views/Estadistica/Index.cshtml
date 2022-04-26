@@ -1,0 +1,27 @@
+﻿
+@{
+    List<ProyectoAula2_ManuelGuzmán_DavidBohorques.Models.EPSInfo> epsInfos = ViewBag.EPSs;
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h3>Estadisticas EPS</h3>
+    @if (epsInfos.Count() > 0)
+    {
+        <ol>
+            @foreach (var eps in epsInfos)
+            {
+                <li>
+                    <label>EPS: @eps.Nombre</label> <br />
+                    <label>Costo Total: $@eps.CostosTotal</label> <br />
+                    <label>Porcentaje Total: @eps.PorcentajeTotal%</label> <br />
+                </li>
+            }
+        </ol>
+    }
+    else
+    {
+        <h4> No hay afiliados registrados!! </h4>
+    }
+</div>
+

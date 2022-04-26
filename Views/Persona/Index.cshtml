@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h3>DATOS PERSONALES</h3>
+    <form action="@Url.Action("Persona", "Persona")" method="post">
+        <table>
+            <tr>
+                <td><label>Nombre:</label></td>
+                <td><input type="text" name="nombre" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Apellido:</label></td>
+                <td><input type="text" name="apellido" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Fecha Nacimiento:</label></td>
+                <td><input type="date" name="fechaNacimiento" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Fecha de Ingreso al sistema de salud:</label></td>
+                <td><input type="date" name="fechaIngresoSistemaSalud" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Fecha de ingreso a la EPS:</label></td>
+                <td><input type="date" name="fechaIngresoEPS" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Edad:</label></td>
+                <td><input type="number" name="edad" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Tipo de afiliación:</label></td>
+                <td>
+                    <select id="tipoAfiliacion" name="tipoAfiliacion">
+                        <option value="Cotizante">Cotizante</option>
+                        <option value="Beneficiario">Beneficiario</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Regimen:</label></td>
+                <td>
+                    <select id="regimen" name="regimen">
+                        <option value="Subsidiado">Subsidiado</option>
+                        <option value="Contributivo">Contributivo</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>EPS:</label></td>
+                <td>
+                    <select id="eps" name="EPS">
+                        <option value="Sura">Sura</option>
+                        <option value="Nueva EPS">Nueva EPS</option>
+                        <option value="Salud Total">Salud Total</option>
+                        <option value="Sanitas">Sanitas</option>
+                        <option value="Savia">Savia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Meses en la EPS:</label></td>
+                <td><input type="number" name="mesesEPS" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Cedula:</label></td>
+                <td><input type="number" name="id" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Numero de enfermedades:</label></td>
+                <td><input type="number" name="numeroEnfermedades" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Costos en tratamientos:</label></td>
+                <td><input type="number" name="costosTratamiento" value=" " /></td>
+            </tr>
+            <tr>
+                <td><label>Enfermedad relevante:</label></td>
+                <td><input type="text" name="enfermedadRelevante" value=" " /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="enviar" value="Enviar" /></td>
+            </tr>
+        </table>
+    </form>
+    @Html.Raw(TempData["ErrorMessage"])
+</div>

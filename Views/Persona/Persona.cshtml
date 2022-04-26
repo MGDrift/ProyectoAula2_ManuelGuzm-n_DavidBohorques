@@ -1,0 +1,29 @@
+﻿@{
+    List<ProyectoAula2_ManuelGuzmán_DavidBohorques.Models.Persona> personasList = ViewBag.Personas;
+    ViewBag.Title = "Persona";
+}
+
+<div>
+    <h3>PERSONAS</h3>
+    <ol>
+        @foreach (var per in personasList)
+        {
+            <li>
+                <label>Nombre: @per.Nombre</label> <br />
+                <label>Apellido: @per.Apellido</label> <br />
+                <label>Fecha de nacimiento: @per.FechaNacimiento</label> <br />
+                <label>Fecha de ingreso al sistema de salud: @per.FechaIngresoSistemaSalud</label> <br />
+                <label>Fecha de ingreso a la EPS: @per.FechaIngresoEPS</label> <br />
+                <label>Edad: @per.Edad</label> <br />
+                <label>Tipo de afiliación: @per.TipoAfiliacion</label> <br />
+                <label>Regimen: @per.Regimen</label> <br />
+                <label>Meses en la EPS: @per.MesesEps</label> <br />
+                <label>Cédula: @per.Id</label> <br />
+                <label>Numero de enfermedades: @per.NumeroEnfermedades</label> <br />
+                <label>Costos de tratamiento: @per.CostosTratamiento</label> <br />
+                <label>Enfermedad relevante: @per.EnfermedadRelevante</label> <br />
+                <label>EPS: @per.EPS1</label> <br />
+            </li>
+        }
+    </ol>
+</div>
